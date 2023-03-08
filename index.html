@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="main-logo">
+          <a href="/"> <img src="/assets/img/en_logo.png" /></a>
+        </div>
+      </header>
+      <section class="container">
+        <div class="table-content">
+          <table cellpading="0" cellspacing="0">
+              <tr>
+                  <td>
+                      <div style="clear: none; float: left;">
+                         <form action="/" method="post">
+                              <select class="select" name="brand" required>
+<!--                                         <option value="">Select Brand</option>
+-->                                    <option value="6thstreet" >6thStreet</option>
+                                  <option value="tommy">Tommy Hilfiger</option>
+                                  <option value="crocs">CROCS</option>
+                                  <option value="dunelondon">DUNE</option>
+                                  <option value="rituals">Rituals</option>
+                              </select>
+
+                               <select class="select" name="report_type" required>
+<!--                                         <option value="">Select Report Type</option>
+-->                                    <option value="SALES">SALES</option>
+                                  <option value="COD">COD</option>
+                                  <option value="FREE">FREE</option>
+                                  <option value="RETURN">RETURN</option>
+                                  <option value="RTO_SALES">RTO SALES</option>
+                                  <option value="RTO_COD">RTO COD</option>
+                                  <option value="CANCEL">CANCEL</option>
+                              </select>
+
+                              <label for="fromDate">From</label>
+                              <input type="date" id="fromDate" name="fromDate" class="date" value="">
+
+                              <label for="toDate">To</label>
+                              <input type="date" id="toDate" name="toDate" class="date" value="">
+
+
+                                  <!-- <input type="hidden" name="regenerate" value="1" />
+                                  <button type="submit" value="submit" name="submit" class="button"  >Regenerate Report</button> -->
+
+                                   <button type="submit" value="submit" name="submit" class="button" >Generate Report</button>
+
+                          </form>
+                      </div>
+
+                      <div style="clear: none; float: right;">
+                          <form action="/" method="post">
+                              <input type="text" id="search" name="search" class="searchbox" value=""  />
+                              <button type="submit" value="1" name="search-button" class="button">Search</button>
+                          </form>
+                      </div>
+                  </td>
+
+              </tr>
+          </table>
+          </form>
+      </div>
+      <table cellpading="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Report Type</th>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Records</th>
+                <th>Quantity</th>
+                <th>Net Retail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+                <tr>
+                    <td><strong>Report brand</strong></td>
+                    <td>Report type</td>
+                    <td>Report from date</td>
+                    <td>Report to date</td>
+                    <td>Report total records</td>
+                    <td>Report total QTY</td>
+                    <td>Report total Revenue</td>
+                    <td>
+                        <a href="/download">
+                            <img src="/assets/img/download.png" width="20" height="20" style="padding-right: 10px;" />
+                        </a>
+                        <a href="/delete">
+                            <img onClick="return confirm('Are you sure, you want to delete ? If Yes click OK else click Cancel');" src="/assets/img/delete.png" width="20" height="20" />
+                        </a>
+                    </td>
+                </tr>
+            <tr>
+                <td colspan="8" style="text-align: center;">No Reports Are Generated Yet !</td>
+            </tr>
+        </tbody>
+    </table>
+      </section>
+    </main>
+  </body>
+</html>
